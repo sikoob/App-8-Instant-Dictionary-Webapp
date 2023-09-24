@@ -1,5 +1,6 @@
 import justpy as jp
 
+
 @jp.SetRoute("/home")
 def home():
     wp = jp.QuasarPage(tailwind=True)
@@ -24,18 +25,23 @@ def home():
            classes = "hover:bg-red-500")
     return wp
 
+
 @jp.SetRoute("/about")
 def about():
     wp = jp.QuasarPage(tailwind=True)
+
 
 def sum_up(widget, msg):
     sum = float(widget.in1.value) + float(widget.in2.value)
     widget.d.text = sum
 
+
 def mouse_enter(widget, msg):
     widget.text = "A mouse entered the house!"
 
+
 def mouse_leave(widget, msg):
     widget.text = "The mouse left!"
+
 
 jp.justpy()
